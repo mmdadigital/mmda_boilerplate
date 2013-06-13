@@ -10,7 +10,7 @@ Drupal boilerplate tries to simplify starting a new site by having the most comm
 directory structures and files already included and set up.
 
 ##Getting started##
-You can start by [downloading](https://github.com/Fidelix/drupal-boilerplate/archive/master.zip)
+You can start by [downloading](archive/master.tar.gz)
 this project. Once you download it you will find that every folder contains a readme.md file.
 This readme.md file has been extensively documented to explain what belongs
 in that specific directory.
@@ -20,14 +20,14 @@ read the readme inside the specific directory.
 
 * [docroot](blob/master/docroot)
  * Where your drupal root should start.
-* [drush]
+* [drush](blob/master/drush)
  * Contains project specific drush commands, aliases, and configurations.
-* [results]
+* [results](blob/master/results)
  * This directory is just used to export test results to. A good example of this
    is when running drush test-run with the --xml option. You can export the xml
    to this directory for parsing by external tools.
-* [test]
+* [test](blob/master/test)
  * A directory for external tests. This is great for non drupal specific tests
  such as selenium, qunit, casperjs.
-* [.gitignore]
+* [.gitignore](blob/master/.gitignore)
  * Contains the a list of the most common excluded files.
