@@ -2,6 +2,7 @@
 #########################
 # Ignore configuration files that may contain sensitive information.
 docroot/sites/*/settings*.php
+dumps/*
 
 # User Generated Content #
 ##########################
@@ -43,3 +44,21 @@ docroot/sites/*/private
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Code editor temporary files #
+###############################
+*.swp
+.idea
+target
+tmp
+bin
+.classpath
+.project
+.settings
+out
+*.ipr
+*.iws
+*.iml
+.springBeans
+*.swp
+.pmd

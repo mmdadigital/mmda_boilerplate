@@ -18,18 +18,18 @@ in that specific directory.
 Here's a breakdown for what each directory/file is used for. If you want to know more please
 read the readme inside the specific directory.
 
-* [docroot](https://github.com/Lullabot/drupal-boilerplate/tree/master/docroot)
+* [docroot]
  * Where your drupal root should start.
-* [drush](https://github.com/Lullabot/drupal-boilerplate/tree/master/drush)
+* [drush]
  * Contains project specific drush commands, aliases, and configurations.
-* [results](https://github.com/Lullabot/drupal-boilerplate/tree/master/results)
+* [results]
  * This directory is just used to export test results to. A good example of this
    is when running drush test-run with the --xml option. You can export the xml
    to this directory for parsing by external tools.
-* [test](https://github.com/Lullabot/drupal-boilerplate/tree/master/test)
+* [test]
  * A directory for external tests. This is great for non drupal specific tests
  such as selenium, qunit, casperjs.
-* [.gitignore](https://github.com/Lullabot/drupal-boilerplate/blob/master/.gitignore)
+* [.gitignore]
  * Contains the a list of the most common excluded files.
 
 Built by Robots&trade;
