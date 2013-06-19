@@ -1,7 +1,7 @@
 # Sensitive information #
 #########################
 # Ignore configuration files that may contain sensitive information.
-docroot/sites/*/settings*.php
+docroot/sites/*/settings.*.php
 dumps/*
 
 # User Generated Content #
@@ -9,6 +9,7 @@ dumps/*
 docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
+docroot/cache/*
 
 # Compiled source #
 ###################

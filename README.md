@@ -18,6 +18,7 @@ in that specific directory.
 Here's a breakdown for what each directory/file is used for. If you want to know more please
 read the readme inside the specific directory.
 
+##FOLDERS##
 * [docroot](blob/master/docroot)
  * Where your drupal root should start.
 * [drush](blob/master/drush)

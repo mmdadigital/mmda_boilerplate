@@ -11,7 +11,7 @@
  */
 
 $aliases['local'] = array(
- 'uri' => 'example.local',
+ 'uri' => 'example.l',
  'root' => str_replace('drush/aliases', 'docroot', dirname(__FILE__)),
 );
 
@@ -22,9 +22,9 @@ $aliases['dev'] = array(
   'remote-user' => 'user',
 );
 
-$aliases['stage'] = array(
-  'uri' => 'stage.example.com',
-  'root' => '/www/stage.example.com/docroot',
+$aliases['test'] = array(
+  'uri' => 'test.example.com',
+  'root' => '/www/test.example.com/docroot',
   'remote-host' => 'example.com',
   'remote-user' => 'user',
 );
