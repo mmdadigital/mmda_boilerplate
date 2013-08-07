@@ -1,34 +1,39 @@
 #Drupal Boilerplate#
 -
 
-Drupal boilerplate is not a module. Instead it just serves as a directory structure for
-starting a new drupal site. The idea behind Drupal boilerplate came from working on so many
-different sites which each follow their own development practice, directory structure,
-deployment guidelines, etc...
+##Informações do Projeto##
 
-Drupal boilerplate tries to simplify starting a new site by having the most common
-directory structures and files already included and set up.
+- Ambiente de produção: http://site.com.br (Ainda legado)
+- Ambiente de desenvolvimento: http://site.dev.mmda.com.br [TODO]
+- Ambiente de testes: http://site.test.mmda.com.br [TODO]
 
-##Getting started##
-You can start by [downloading](archive/master.tar.gz)
-this project. Once you download it you will find that every folder contains a readme.md file.
-This readme.md file has been extensively documented to explain what belongs
-in that specific directory.
+- Repositório de código principal: http://bitbucket.org/mmda/[TODO]
+- Issue tracker: http://extranet.mmda.com.br/youtrack/issues/[TODO]
+- Interação com o cliente: https://mmda.basecamphq.com/projects/[TODO]
+- Credenciais: [TODO]
 
-Here's a breakdown for what each directory/file is used for. If you want to know more please
-read the readme inside the specific directory.
+##Envolvidos##
+- [Nome do Caboclo](mailto:email@mmda.com.br) - Cargo e papel no projeto
+- [Felipe Fidelix](mailto:felipe@mmda.com.br) - Arquiteto e Desenvolvedor
+
+##TODO##
+- Ambiente de desenvolvimento e testes
+- Repositório de código principal
+- Issue tracker
+- Interação com o cliente
+- Link de credenciais
+- Listar o envolvido do cliente
+- Colocar informações práticas de desenvolvimento do projeto.
 
 ##FOLDERS##
 * [docroot](blob/master/docroot)
- * Where your drupal root should start.
+ * Raiz do Drupal
 * [drush](blob/master/drush)
- * Contains project specific drush commands, aliases, and configurations.
+ * Comandos, aliases e configurações do drush específicas do projeto.
 * [results](blob/master/results)
- * This directory is just used to export test results to. A good example of this
-   is when running drush test-run with the --xml option. You can export the xml
-   to this directory for parsing by external tools.
-* [test](blob/master/test)
- * A directory for external tests. This is great for non drupal specific tests
- such as selenium, qunit, casperjs.
-* [.gitignore](blob/master/.gitignore)
- * Contains the a list of the most common excluded files.
+ * Resultados de testes exportados. Um bom exemplo disto é quando se roda
+   drush test-run com a opção --xml. Você pode exportar o xml para este
+   diretório para "parse" por ferramentas externas como o jenkins.
+* [tests](blob/master/tests)
+ * Diretório para testes externos. Ótimo para testes não-específicos do drupal
+   como selenium, qunit, casperjs, jasmine.

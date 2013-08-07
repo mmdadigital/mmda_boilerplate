@@ -1,35 +1,46 @@
 #!/bin/bash
-JOB_NAME=$1
-BUILD_ID=$2
-WORKSPACE=$3
+source arg_getter.sh
 
-# Seta modo de debug para imprimir cada linha antes de executar:
-set -x
+# TODO:
+# Fazer backup do banco, fazer backup dos arquivos.
 
-# Faz backup do banco de dados atual.
-## cd /var/www/$JOB_NAME/$BUILD_ID # TODO
+mkdir -p $WORKDIR
+cd $WORKDIR
+if [[ -d LATEST && -f build_id ]] ; then
+  mkdir -p /tmp/builds
+  # Move a última build
+  mv LATEST /tmp/builds/`cat build_id`
+fi
+
+cp -fr $FROM LATEST
+echo $BUILD_ID > build_id
+ln -sf LATEST/docroot docroot
 
 # Cria a pasta de arquivos compartilhados por todas as builds
-mkdir -p /var/www/$JOB_NAME/shared_files/
-# Copia a build atual pra pasta de builds
-cp -fr $WORKSPACE /var/www/$JOB_NAME/$BUILD_ID/
-# Cria um symlink da última build
-ln -sf /var/www/$JOB_NAME/$BUILD_ID/ /var/www/$JOB_NAME/LATEST
-ls -la /var/www/$JOB_NAME/$BUILD_ID/
-# Linka a pasta do projeto pra última build.
-ln -sf /var/www/$JOB_NAME/LATEST /www/$JOB_NAME
+mkdir -p shared_files
+
 # Configura a pasta files para usar a pasta de arquivos compartilhados
-ln -sf /var/www/$JOB_NAME/shared_files/ /www/$JOB_NAME/docroot/sites/default/files
-ls -la
-# Remove todas as builds exceto as 4 últimas, a pasta shared_files e LATEST
-rm -rf `ls -td /var/www/$JOB_NAME/*/ | tail -n +5 | grep -v "shared_files$\|LATEST$"`
+ln -sf $WORKDIR/shared_files $WORKDIR/LATEST/docroot/sites/default/files
+
 # Aponta o arquivo settings.local.php pro arquivo de configurações compartilhado por todas as builds.
-ln -sf /var/www/$JOB_NAME/settings.local.php /www/$JOB_NAME/docroot/sites/default/settings.local.php
+ln -sf $WORKDIR/settings.local.php $WORKDIR/LATEST/docroot/sites/default/settings.local.php
+
 # Ajusta as permissões
-#chown -R www-data:www-data /var/www/$JOB_NAME/shared_files
-chmod -R 777 /var/www/$JOB_NAME/shared_files
+chown -R $USER:$USER $WORKDIR
+chmod -R 777 $WORKDIR/shared_files
 
 # Ajustes pré-deploy do Drupal
 # Faz update do banco de dados, reverte todas as features e limpa o cache.
-cd /www/$JOB_NAME/docroot
-drush build --yes
+cd $WORKDIR/LATEST/docroot
+drush -y dis devel
+drush -y dis views_ui
+drush -y dis context_ui
+drush -y dis update
+drush -y dis l10n_update
+drush -y dis dblog
+drush -y dis rules_ui
+drush -y dis update
+drush -y dis field_ui
+drush updb
+drush cc all
+drush fra -y

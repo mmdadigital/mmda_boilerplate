@@ -3,6 +3,7 @@
 # Ignore configuration files that may contain sensitive information.
 docroot/sites/*/settings.*.php
 dumps/*
+old
 
 # User Generated Content #
 ##########################
@@ -10,6 +11,10 @@ docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
 docroot/cache/*
+docroot/tmp
+shared_files
+files
+*.sass-cache*
 
 # Compiled source #
 ###################
@@ -63,3 +68,7 @@ out
 .springBeans
 *.swp
 .pmd
+.allow-devtools-edit
+Guardfile
+config.rb
+.orig

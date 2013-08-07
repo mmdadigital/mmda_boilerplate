@@ -1,11 +1,6 @@
 <?php
 
 /**
- * @file
- * Default drush aliases.drushrc.php file.
- */
-
-/**
  * These are the default configuration so that
  * everyone can just overwrite the different settings.
  */
@@ -20,6 +15,9 @@ $aliases['dev'] = array(
   'root' => '/www/dev.example.com/docroot',
   'remote-host' => 'example.com',
   'remote-user' => 'user',
+  'path-aliases' => array(
+    '%dump-dir' => '~/.drush/dumps/',
+  ),
 );
 
 $aliases['test'] = array(
