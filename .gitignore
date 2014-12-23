@@ -1,14 +1,25 @@
 # Sensitive information #
 #########################
 # Ignore configuration files that may contain sensitive information.
+<<<<<<< HEAD
 docroot/sites/*/settings*.php
 *.local.php
+=======
+docroot/sites/*/settings.*.php
+dumps/*
+old
+>>>>>>> b096837b3cad1c8ab61641251af0bdfc1a5033cd
 
 # User Generated Content #
 ##########################
 docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
+docroot/cache/*
+docroot/tmp
+shared_files
+files
+*.sass-cache*
 
 # Vagrant Files #
 #################
@@ -49,6 +60,30 @@ ehthumbs.db
 Icon\?
 Thumbs.db
 
+<<<<<<< HEAD
 # IDEs #
 ########
 .idea
+=======
+# Code editor temporary files #
+###############################
+*.swp
+.idea
+target
+tmp
+bin
+.classpath
+.project
+.settings
+out
+*.ipr
+*.iws
+*.iml
+.springBeans
+*.swp
+.pmd
+.allow-devtools-edit
+Guardfile
+config.rb
+.orig
+>>>>>>> b096837b3cad1c8ab61641251af0bdfc1a5033cd

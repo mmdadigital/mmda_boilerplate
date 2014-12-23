@@ -1,30 +1,35 @@
 <?php
 
 /**
- * @file
- * Default drush aliases.drushrc.php file.
- */
-
-/**
  * These are the default configuration so that
  * everyone can just overwrite the different settings.
  */
 
-$aliases['dev'] = array(
- 'uri' => 'example.lan',
+$aliases['local'] = array(
+ 'uri' => 'example.l',
  'root' => str_replace('drush/aliases', 'docroot', dirname(__FILE__)),
 );
 
-$aliases['stage'] = array(
-  'uri' => 'stage.example.com',
-  'root' => '/var/www/stage.example.com/docroot',
+$aliases['dev'] = array(
+  'uri' => 'dev.example.com',
+  'root' => '/www/dev.example.com/docroot',
+  'remote-host' => 'example.com',
+  'remote-user' => 'user',
+  'path-aliases' => array(
+    '%dump-dir' => '~/.drush/dumps/',
+  ),
+);
+
+$aliases['test'] = array(
+  'uri' => 'test.example.com',
+  'root' => '/www/test.example.com/docroot',
   'remote-host' => 'example.com',
   'remote-user' => 'user',
 );
 
 $aliases['live'] = array(
   'uri' => 'example.com',
-  'root' => '/var/www/stage.example.com/docroot',
+  'root' => '/www/example.com/docroot',
   'remote-host' => 'example.com',
   'remote-user' => 'user',
 );
