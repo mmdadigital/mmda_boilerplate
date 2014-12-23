@@ -14,7 +14,7 @@
 function servo_install()
 {
   // Set the admin theme.
-  variable_set('admin_theme', 'adminimal_theme');
+  variable_set('admin_theme', 'adminimal');
   variable_set('node_admin_theme', 1);
   variable_set('theme_default', 'bartik');
   variable_set('jquery_update_jquery_version', '1.8');
