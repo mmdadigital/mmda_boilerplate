@@ -1,5 +1,5 @@
 # Servo
-This is a fork of [Drupal Boilerplate](https://github.com/Lullabot/drupal-boilerplate), but with the addition of an installation profile.
+This is a fork of [Servo ](https://github.com/Lullabot/servo), but with the addition modules.
 
 ## Install Profile Instructions
 ```
