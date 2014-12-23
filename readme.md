@@ -1,5 +1,5 @@
 # Servo
-This is a fork of [Servo ](https://github.com/Lullabot/servo), but with the addition modules.
+This is a fork of [Servo ](https://github.com/Lullabot/servo), but with the addition modules  .
 
 ## Install Profile Instructions
 ```
@@ -10,10 +10,10 @@ $ drush make servo.make
 Then install Drupal, selecting the "Servo" profile. This will give you
 
 * Responsive toolbar
-* Shiny admin theme
+* Adminimal admin theme
 * CKEditor with a HTML Purifier based filter and Linkit
 * Basic "Page" content type
-* The windup starter theme with automation tools already configured
+* The Aurora starter theme
 
 -
 
