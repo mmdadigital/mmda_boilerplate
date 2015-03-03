@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <project name="MMDA Boilerplate" default="drupal-build" basedir="./docroot" description="MMDA Boilerplate">
+    <target name="drupal-build">
+      <exec command="drush build -y">
+      </exec>
+    </target>
+  </project>
