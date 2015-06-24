@@ -1,14 +1,8 @@
 # Sensitive information #
 #########################
-# Ignore configuration files that may contain sensitive information.
-<<<<<<< HEAD
 docroot/sites/*/settings*.php
-*.local.php
-=======
-docroot/sites/*/settings.*.php
 dumps/*
 old
->>>>>>> b096837b3cad1c8ab61641251af0bdfc1a5033cd
 
 # User Generated Content #
 ##########################
@@ -60,11 +54,6 @@ ehthumbs.db
 Icon\?
 Thumbs.db
 
-<<<<<<< HEAD
-# IDEs #
-########
-.idea
-=======
 # Code editor temporary files #
 ###############################
 *.swp
@@ -84,6 +73,4 @@ out
 .pmd
 .allow-devtools-edit
 Guardfile
-config.rb
 .orig
->>>>>>> b096837b3cad1c8ab61641251af0bdfc1a5033cd
